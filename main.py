@@ -14,7 +14,7 @@ from sklearn.preprocessing import StandardScaler
 import base64
 
 # Authenticate to the Earth Engine servers.
-ee.Authenticate()
+
 ee.Initialize(project='satellite-water-12')
 
 model = joblib.load('wqm_logrl1_final.pkl')
@@ -189,4 +189,5 @@ if st.button('Get Water Quality Parameters'):
     ).add_to(m)
 
     # Display the map
+
     folium_static(m)
